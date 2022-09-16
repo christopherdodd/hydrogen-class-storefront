@@ -1,0 +1,26 @@
+{
+  "name": "hydrogen-storefront",
+  "description": "An example using JavaScript in Hydrogen",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "scripts": {
+    "dev": "shopify hydrogen dev",
+    "build": "shopify hydrogen build",
+    "preview": "shopify hydrogen preview"
+  },
+  "devDependencies": {
+    "@shopify/cli": "3.10.1",
+    "@shopify/cli-hydrogen": "3.10.1",
+    "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "@shopify/hydrogen": "^1.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "author": "chrisdodd"
+}
