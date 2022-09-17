@@ -26,8 +26,8 @@ export default function Layout({ children }) {
                     {shop.name}
                 </Link>
                 <ul className="header-navigation">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li><a href="/collections/freestyle">Freestyle</a></li>
                     <li><a href="#">Link 3</a></li>
                 </ul>
                 <div className="header-cart-link"></div>

@@ -1,4 +1,4 @@
-import { Image, Money } from '@shopify/hydrogen';
+import { Link, Image, Money } from '@shopify/hydrogen';
 
 export default function ProductCard({ product }) {
 
@@ -8,9 +8,9 @@ export default function ProductCard({ product }) {
 
     return (
         <div className="product-grid-item">
-            <div className="image-container">
+            <Link to={`/products/${product.handle}`} className="image-container">
                 <Image alt={product.featuredImage.altText} data={product.featuredImage} />
-            </div>
+            </Link>
             <div className="product-grid-item-title">{product.title}</div>
             <div className="product-grid-prices">
                 <Money withoutTrailingZeros data={price} />
