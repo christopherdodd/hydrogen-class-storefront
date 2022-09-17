@@ -30,7 +30,7 @@ export default function Layout({ children }) {
                 <ul className="header-navigation">
                     <li><a href="/catalog">Catalog</a></li>
                     <li><a href="/collections/freestyle">Freestyle</a></li>
-                    <li><a href="#">Link 3</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
                 <Link to="/cart" className="header-cart-link">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
