@@ -1,28 +1,11 @@
-import { useShopQuery, CacheLong, gql } from "@shopify/hydrogen";
+import Layout from '../components/Layout.server';
 
 export default function Home() {
-
-  const data = useShopQuery({
-      query: SHOP_QUERY,
-      cache: CacheLong(),
-      preload: true,
-  });
-
-const { data: { shop } } = data;
-
   return (
-    <div className="home-page container">
-        <h1>{shop.name}</h1>
-        <div>{shop.description}</div>
-    </div>
+    <Layout>
+      <div className="home-page container">
+        <h1>Homepage</h1>
+      </div>
+    </Layout>
   );
 }
-
-const SHOP_QUERY = gql`
-  query ShopInfo {
-    shop {
-      name
-      description
-    }
-  }
-`;
