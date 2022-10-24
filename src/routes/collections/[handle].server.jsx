@@ -23,8 +23,8 @@ export default function Collection() {
     return (
         <Layout>
             <Suspense>
-                <div className="catalog-page container">
-                    <h1>{collection.title}</h1>
+                <div className="container pt-3">
+                    <h1 className="collection-title">{collection.title}</h1>
                     <div className="product-grid">
                         {nodes.map((product) => (
                             <ProductCard product={product}></ProductCard>

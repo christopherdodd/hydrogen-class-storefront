@@ -17,7 +17,7 @@ export default function Catalog() {
     return (
         <Layout>
             <Suspense>
-                <div className="catalog-page container">
+                <div className="container pt-3">
                     <div className="product-grid">
                         {nodes.map((product) => (
                             <ProductCard product={product}></ProductCard>

@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    main {
+        background: #fafafc;
+    }
+    .font-family-logo {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .font-family-nav {
+        font-family: Circular, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+}
+
+@layer components {
+    .header-inner {
+        @apply flex items-center justify-between py-4;
+    }
+    .header-logo {
+        @apply font-bold no-underline font-family-logo;
+        min-width: 33.33vw;
+    }
+    .header-navigation {
+        @apply flex items-center justify-around list-none font-family-nav gap-3;
+        max-width: 33.33vw;
+    }
+    .header-cart-link {
+        @apply flex items-center justify-end no-underline text-slate-600 hover:text-black;
+        width: 33.33vw;
+    }
+    .product-grid, .article-grid {
+        @apply grid grid-cols-2 sm:grid-cols-3 gap-3 grid-rows-3;
+    }
+    .product-grid-item {
+        @apply bg-white p-4 cursor-pointer;
+    }
+    .product-page {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-5 py-6;
+    }
+    .product-page-image {
+        @apply object-cover w-full h-full mix-blend-multiply;
+    }
+    .product-option-group {
+        @apply mb-4;
+    }
+    .product-option-name {
+        @apply font-bold;
+    }
+    .product-option-value {
+        @apply inline-block [&:not(:last-child)]:mr-3;
+    }
+    .product-option-value input[type="radio"]:checked + label {
+        border-color: black;
+    }
+    .add-to-cart,
+    .checkout-button {
+        @apply text-base p-3 cursor-pointer transition-all 
+                tracking-wide bg-slate-800 border-slate-800 text-white
+                text-center no-underline opacity-100 relative border-2
+                font-bold uppercase hover:bg-white hover:text-slate-800;
+    }
+    .cart-quantity-selector {
+        @apply flex items-center border-2 border-slate-400 w-16 sm:w-24 bg-white;
+    }
+    .cart-quantity-selector button {
+        @apply relative block appearance-none border-none text-center p-0 m-0 w-7 h-7 min-w-[24px]
+                bg-white outline-none flex items-center cursor-pointer;
+    }
+    .collection-title {
+        color: var(--tw-prose-headings);
+        font-weight: 800;
+        font-size: 2.25em;
+        margin-top: 0;
+        margin-bottom: 0.8888889em;
+        line-height: 1.1111111;
+    }
+}

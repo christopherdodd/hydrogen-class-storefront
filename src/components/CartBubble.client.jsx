@@ -9,6 +9,6 @@ export default function CartBubble() {
   }
 
   return (
-    <span>({ totalQuantity })</span>
+    <span className="relative -top-1 text-sm">({ totalQuantity })</span>
   )
 }

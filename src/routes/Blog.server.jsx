@@ -17,7 +17,7 @@ export default function Blog() {
     return (
         <Layout>
             <Suspense>
-                <div className="container">
+                <div className="container pt-3">
                     <div className="article-grid">
                         {articles.map(article => <ArticleGridItem article={article} /> )}
                     </div>
@@ -30,10 +30,10 @@ export default function Blog() {
 function ArticleGridItem({ article }) {
     return (
         <div className="article-grid-item">
-            <Link to={`/blog/${article.handle}`} className="image-container">
-                <Image data={article.image} alt={article.image.altText} />
+            <Link to={`/blog/${article.handle}`} className="aspect-[1.5] block mb-2">
+                <Image data={article.image} alt={article.image.altText} className="object-cover object-center w-full h-full" />
             </Link>
-            <Link to={`/blog/${article.handle}`} className="article-grid-item-title">{ article.title }</Link> 
+            <Link to={`/blog/${article.handle}`} className="font-bold">{ article.title }</Link> 
         </div>
     )
 }

@@ -29,10 +29,10 @@ function ProductForm({ product }) {
     const isOutOfStock = !selectedVariant?.availableForSale || false;
 
     return (
-        <div>
+        <div className="prose">
             <h1>{product.title}</h1>
             <ProductPrice 
-                className="product-page-price" 
+                className="mb-2" 
                 withoutTrailingZeros
                 data={product}
                 variantId={selectedVariant.id}
@@ -54,6 +54,7 @@ function ProductForm({ product }) {
                                 return (
                                     <div key={id} className="product-option-value">
                                         <input
+                                            className="opacity-0 fixed w-0"
                                             type="radio"
                                             checked={checked}
                                             name={name}
@@ -61,7 +62,9 @@ function ProductForm({ product }) {
                                             id={id}
                                             onChange={() => setSelectedOption(name, value)}
                                         />
-                                        <label htmlFor={id}>{value}</label>
+                                        <label 
+                                            className="inline-block cursor-pointer font-sans border-b-2 border-transparent hover:border-slate-400" 
+                                            htmlFor={id}>{value}</label>
                                     </div>
                                 )
                             })}

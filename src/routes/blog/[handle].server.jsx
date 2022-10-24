@@ -39,7 +39,7 @@ export default function Article() {
     if(!article) {
         return (
             <Layout>
-                <div className="container">
+                <div className="container pt-3">
                     <div>Article not found</div>
                 </div>
             </Layout>
@@ -51,9 +51,9 @@ export default function Article() {
             <Suspense>
                 <Seo type="article" data={article} />
             </Suspense>
-            <div className="article-page container">
+            <div className="prose container mt-4">
                 <div className="article-page-header">
-                    <h1>{article.title}</h1>
+                    <h1 className="mb-0">{article.title}</h1>
                     <span>{formattedDate} · {article.authorV2.name}</span>
                 </div>
                 <article>
